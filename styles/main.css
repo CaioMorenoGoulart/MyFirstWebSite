@@ -1,0 +1,246 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font: bolder
+}
+.header {
+ background-color: white;
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 60px;
+}
+.container{
+ width: 100%;
+ height: 100%;
+}
+
+.container_wrap {
+ display: flex;
+ justify-content: center;
+ 
+ margin: auto;
+ width: 100%;
+ height: 100%;
+ max-width: 1024px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    margin: auto 284px auto 20px;
+}
+.logo h1{
+    border: 2px solid black;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 18px;
+    padding: 1px 8px;
+}
+ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+}
+.nav{
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+nav{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+    margin: 10px;
+    font-size: 16px;
+}
+li a.icon{
+    margin: auto;
+    display: block;
+    height: 30px;
+    width: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-image: url("/imagens/sacola.png");
+}
+
+.center_body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    height: 350px;
+    width: 100%;
+    background: linear-gradient(45deg, #f222e5 0, #d712eb 12.5%, #b804f0 25%, #9004f4 37.5%, #5510f8 50%, #001dfb 62.5%, #0028fe 75%, #0031ff 87.5%, #0036ff 100%);
+}
+.text_box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.text_box h1{
+    text-transform: uppercase;
+    margin: 0 15px 25px 15px;
+    color: white;
+    text-align: center;
+    font-size: 47px;
+}
+.text_box h2{
+    color: white;
+    font-size: 30px;
+    margin: 0 15px 15px 15px;
+    text-align: center;
+}
+
+
+.showcase li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 230px;
+
+}
+.text_position{
+    display: flex;
+    flex-direction: column;
+}
+.text_position img{
+    padding-bottom: 20px;
+}
+.text_position h2{
+    font-size: 14px;
+}
+.text_position h3{
+    font-size: 12px;
+}
+.estrela img{
+    padding: 5px 0px;
+    width: 11px;
+    height: 11px;
+}
+
+.xburguer{
+    display: none;
+}
+
+@media (max-width: 991px) {
+    
+    .container_wrap.open .nav {
+        left: 0px;
+    }
+    .container_wrap.open .xburguer span:nth-child(1){
+        transform: rotate(45deg); 
+        margin: 0 0 -2px 0;
+    }
+    .container_wrap.open .xburguer span:nth-child(2){
+        display: none;
+    }
+    .container_wrap.open .xburguer span:nth-child(3){
+        transform: rotate(-45deg); 
+        margin: -2px 0 0 0;
+    }
+    .container_wrap.open .nav {
+        left: 0px;
+    }
+
+    .xburguer{
+        position: fixed;
+        top: 15px;
+        left: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: transparent;
+        border: 0;
+        height: 30px;
+        width: 30px;
+    }
+    .xburguer span{
+    
+        background-color: black;
+        height: 4px;
+        width: 25px;
+        border-radius: 25px;
+        margin: 2px 0px;
+        transition: .3s;
+    }
+    .xburguer.hamburguer span:nth-child(1){
+        transform: rotate(45deg); 
+        margin: 0 0 -2px 0;
+    }
+    .xburguer.hamburguer span:nth-child(2){
+        display: none;
+    }
+    .xburguer.hamburguer span:nth-child(3){
+        transform: rotate(-45deg); 
+        margin: -2px 0 0 0;
+    }
+    .logo{
+        margin: 20px;
+    }
+    .logo.open{
+        position: initial;
+        left: initial;
+        top: initial;
+    }
+    .nav{
+        position: fixed;
+        left: -350px;
+        align-items: flex-start;
+        top: 60px;
+        width: 300px;
+        height: 100vh;
+        border-top: 1px solid #cecece ;
+        transition: .3s;
+        background: rgb(3 0 29)
+    }
+    .nav.open{
+        left: 0px;
+    }
+    .nav ul{
+        flex-direction: column;
+    }
+    .nav nav ul li{
+        padding: 10px 0;
+        width: 100%;
+        text-align: center;
+        transition: .3s;
+        border-bottom: 1px solid transparent;
+    }
+    .nav nav ul li a{
+        color: white;
+    }   
+    
+    .nav nav ul li.bg_icon .icon{
+
+        background-color: white;
+        padding: 10px;
+        border-radius: 50px;
+        background-size: 23px;
+    }
+    .nav nav ul li:hover{
+        background-color:  rgba(189,189,189,.4);
+}
+    ul{
+        flex-wrap: wrap;
+        justify-content:center;
+    }
+    .container_wrap ul li{
+        padding: 0 15px;
+    }
+}
